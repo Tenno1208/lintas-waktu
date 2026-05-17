@@ -1,0 +1,28 @@
+<?php
+
+namespace App\Providers;
+
+use Illuminate\Support\ServiceProvider;
+
+class AppServiceProvider extends ServiceProvider
+{
+    /**
+     * Register any application services.
+     */
+    public function register(): void
+    {
+        //
+    }
+
+    /**
+     * Bootstrap any application services.
+     */
+    public function boot(): void
+{
+    // Memaksa semua URL asset menggunakan HTTPS saat di deploy di Vercel
+    if (config('app.env') !== 'local') {
+        URL::forceScheme('https');
+    }
+}
+
+}
