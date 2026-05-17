@@ -23,6 +23,10 @@
     "directories": {
         "test": "tests"
     },
+    "supportedArchitectures": {
+    "os": ["win32", "linux"],
+    "cpu": ["x64"]
+  },
     "dependencies": {
         "agent-base": "^6.0.2",
         "ansi-regex": "^5.0.1",
